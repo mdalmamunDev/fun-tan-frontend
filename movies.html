@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie</title>
+  <link rel="stylesheet" href="styles/index.css"/>
+
+  <!-- tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-900 text-white max-w-screen-2xl mx-auto">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4 bg-gray-800 z-50">
+    <div class="flex items-center space-x-4">
+      <img src="https://via.placeholder.com/40x40?text=Logo" alt="Logo" class="w-8 h-8">
+      <!-- 3-bar (Hamburger) icon for mobile -->
+      <button class="block md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <!-- Navigation links (visible on larger screens, hidden on mobile) -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="#" class="hover:text-red-500">TV Shows</a>
+        <a href="movie.html" class="hover:text-red-500">Movies</a>
+        <a href="#" class="hover:text-red-500">New & Popular</a>
+        <a href="#" class="hover:text-red-500">My List</a>
+      </nav>
+    </div>
+    <!-- Profile and Search -->
+    <div class="flex items-center space-x-4">
+      <button class="bg-gray-700 px-3 py-1 rounded">Search</button>
+      <img src="https://via.placeholder.com/40" alt="User Profile" class="w-8 h-8 rounded-full">
+    </div>
+  </header>
+  <!-- Mobile Menu (visible when toggled) -->
+  <div id="mobileMenu" class="md:hidden hidden bg-gray-800 text-white">
+    <nav class="flex flex-col items-start px-6 py-4 pt-20 space-y-4">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="hover:text-red-500">TV Shows</a>
+      <a href="#" class="hover:text-red-500">Movies</a>
+      <a href="#" class="hover:text-red-500">New & Popular</a>
+      <a href="#" class="hover:text-red-500">My List</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+<!-- Main Content -->
+<div class="mt-16">
+  <main class="p-6 md:p-12">
+    <!-- Page Title -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">All Movies</h1>
+      <!-- Filter Dropdown -->
+      <div class="relative">
+        <button class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 flex items-center">
+          <span>Filter</span>
+          <i class="fa fa-chevron-down ml-2"></i>
+        </button>
+        <div class="absolute right-0 mt-2 bg-gray-800 border border-gray-700 rounded-md shadow-lg hidden group-hover:block">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-700">Action</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-700">Comedy</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-700">Drama</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-700">Romance</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-700">Sci-Fi</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Movie Card -->
+      <div class="relative w-full h-64 bg-cover bg-center rounded-md hover:scale-105 transform transition"
+        style="background-image: url('https://via.placeholder.com/300x400?text=Movie+1')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-md"></div>
+        <div class="absolute bottom-2 left-2 text-sm font-semibold">Movie Title</div>
+      </div>
+      <!-- Add more cards here -->
+      <div class="relative w-full h-64 bg-cover bg-center rounded-md hover:scale-105 transform transition"
+        style="background-image: url('https://via.placeholder.com/300x400?text=Movie+2')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-md"></div>
+        <div class="absolute bottom-2 left-2 text-sm font-semibold">Movie Title</div>
+      </div>
+      <div class="relative w-full h-64 bg-cover bg-center rounded-md hover:scale-105 transform transition"
+        style="background-image: url('https://via.placeholder.com/300x400?text=Movie+3')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-md"></div>
+        <div class="absolute bottom-2 left-2 text-sm font-semibold">Movie Title</div>
+      </div>
+      <div class="relative w-full h-64 bg-cover bg-center rounded-md hover:scale-105 transform transition"
+        style="background-image: url('https://via.placeholder.com/300x400?text=Movie+4')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-md"></div>
+        <div class="absolute bottom-2 left-2 text-sm font-semibold">Movie Title</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+  <!-- Footer -->
+  <footer class="p-8 max-w-screen-lg mx-auto">
+    <div class="text-center text-white mb-4">
+      <h2 class="text-xl">Ready to watch? Enter your email to create or restart your membership.</h2>
+      <div class="mt-4 flex justify-center items-center">
+        <input type="email" placeholder="Email address" class="p-3 rounded-l-md text-black w-72">
+        <button class="bg-red-600 text-white px-4 py-3 rounded-r-md hover:bg-red-700">Get Started</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 text-sm text-gray-400">
+      <a href="#" class="hover:underline">FAQ</a>
+      <a href="#" class="hover:underline">Help Center</a>
+      <a href="#" class="hover:underline">Account</a>
+      <a href="#" class="hover:underline">Media Center</a>
+      <a href="#" class="hover:underline">Investor Relations</a>
+      <a href="#" class="hover:underline">Jobs</a>
+      <a href="#" class="hover:underline">Ways to Watch</a>
+      <a href="#" class="hover:underline">Terms of Use</a>
+      <a href="#" class="hover:underline">Privacy</a>
+      <a href="#" class="hover:underline">Cookie Preferences</a>
+      <a href="#" class="hover:underline">Corporate Information</a>
+      <a href="#" class="hover:underline">Contact Us</a>
+      <a href="#" class="hover:underline">Speed Test</a>
+      <a href="#" class="hover:underline">Legal Notices</a>
+      <a href="#" class="hover:underline">Only on Netflix</a>
+    </div>
+
+    <div class="mt-8">
+      <button class="flex items-center space-x-2 border border-gray-500 px-4 py-2 rounded hover:border-white">
+        <span>🌐</span>
+        <span>English</span>
+      </button>
+    </div>
+
+    <div class="mt-4 text-gray-500">
+      <p>Netflix Bangladesh</p>
+    </div>
+  </footer>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="scripts/index.js"></script>
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
